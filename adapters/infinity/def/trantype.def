@@ -1,0 +1,10 @@
+SET RANDOM	J+INTRAN	J$(66),J(1),J1(2),J2(1)
+SET INDEX	J!INTRAN	J1(0),J$(1,4)
+SET RANGE	J1(0)={sub:cono}
+SET PRESELECT	cono={sub:cono}
+trancode		J$(1,4)		varchar(4)
+screenname		J$(5,14)	varchar(10)
+reportname		J$(15,44)	varchar(30)
+type			J$(45,46)	varchar(2)
+sales_seqno		J(0)		int
+cono			J1(0)		int

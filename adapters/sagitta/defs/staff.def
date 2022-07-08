@@ -1,0 +1,13 @@
+SET FILE STAFF
+SET MAXRECORD 3000
+SET SETSIZE 20
+rowid			rowid	varchar(20)
+staff			0 varchar(10)		L,5
+name			3 varchar(60)		L,40
+address1		4 varchar(60)		L,40
+address2		5 varchar(60)		L,40
+zip				6 varchar(15)		L,10,STVS
+city			7 varchar(30)		L,25
+state			8 varchar(10)		L,2
+work_phone		9 varchar(20)		
+home_phone		10 varchar(20)		

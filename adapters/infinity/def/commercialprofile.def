@@ -1,0 +1,43 @@
+SET RANDOM	J+ARCPR		J$(436),J(1),J1(10),J2(2)
+SET INDEX	J!ARCPR		J1(0),J1(1),J$(1,8)
+SET RANGE	J1(0)={sub:cono} AND J1(1)={sub:pcno}
+SET PRESELECT	cono={sub:cono} pcno={sub:pcno}
+custno				J$(1,8)			varchar(8)
+cust_or_prospect	J$(9,9)			char(1)
+ins_contact			J$(10,39)		varchar(30)
+ins_title			J$(40,53)		varchar(14)
+executive			J$(54,83)		varchar(30)
+exec_title			J$(84,97)		varchar(14)
+desc_of_bus1		J$(98,147)		varchar(50)
+desc_of_bus2		J$(148,197)		varchar(50)
+siccode1			J$(198,201)		varchar(4)
+siccode2			J$(202,205)		varchar(4)
+siccode3			J$(206,209)		varchar(4)
+siccode4			J$(210,213)		varchar(4)
+seccode5			J$(214,217)		varchar(4)
+ins_ext				J$(218,221)		varchar(4)
+exec_ext			J$(222,225)		varchar(4)
+tax_id				J$(226,237)		varchar(12)
+comment1			J$(239,288)		varchar(50)
+comment2			J$(289,338)		varchar(50)
+name1				J$(339,368)		varchar(30)
+siccode				J$(369,372)		varchar(4)
+comment				J$(373,397)		varchar(25)
+salutation			J$(398,417)		varchar(20)
+mailcode			J$(418,422)		varchar(5)
+prod				J$(423,426)		varchar(4)
+reviewer			J$(427,436)		varchar(10)
+fiscal_yr_end		J(0)			int
+cono				J1(0)			int
+pcno				J1(1)			int
+last_fin_update     J1(2)			date
+annual_growth       J1(3)			float
+employees           J1(4)			int
+sqft_office         J1(5)			int
+sqft_factory        J1(6)			int
+locations           J1(7)			int
+last_review 		J1(8)			date
+next_review 		J1(9)			date
+surety_table 		J1(10)			float
+annual_sales 		J2(0)      		float
+annual_payroll 		J2(1)     		float

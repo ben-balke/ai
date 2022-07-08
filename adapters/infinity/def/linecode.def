@@ -1,0 +1,19 @@
+SET RANDOM	J+INLCDE	J$(60),J(1),J1(2),J2(2)
+SET INDEX	J!INLCDE	J1(0),J(0)
+SET RANGE	J1(0)={sub:cono}
+SET PRESELECT	cono={sub:cono}
+inqname				J$(1,10)	varchar(10)
+name				J$(11,40)	varchar(30)
+pprefname			J$(41,46)	char(6)
+consinv				J$(47,47)	char(1)
+snap_yn				J$(48,48)	char(1)
+claimsppref			J$(49,54)	char(6)
+subgroupname			J$(55,60)	char(6)             
+linecode			J(0)		int
+saseq_no			J(1)		int
+cono				J1(0)		int
+p_c_linetype			J1(1)		int
+masterlinecode			J1(2)		int
+commincgl			J2(0)		int
+commexpgl			J2(1)		int
+dbincgl				J2(2)		int

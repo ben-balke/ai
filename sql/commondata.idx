@@ -1,0 +1,45 @@
+/* Customer */
+create unique index cd_customeri on cd_customer (office_id, id);
+/* Policy */
+create unique index cd_policies_pkey on cd_policy (office_id, id);
+create index cd_policies_expdate_i on cd_policy (office_id, expdate, effdate);
+create index cd_policies_book_i on cd_policy (office_id, book_end, book_start);
+
+/* Insuror */
+create index cd_insuror_i on cd_insuror (office_id, id);
+create index cd_insuror_code_i on cd_insuror (office_id, code);
+create index cd_insuror_payee_i on cd_insuror (office_id, payee_id);
+
+/* Coverage */
+create index cd_coverage_i on cd_coverage (office_id, id);
+create index cd_coverage_code_i on cd_coverage (office_id, code);
+
+/* State */
+create unique index cd_state_i on cd_state (id);
+
+/* Transaction */
+create index cd_transaction_i on cd_transaction (office_id, trantype, kpi_group, trandate);
+
+/* Staff */
+create index cd_staff_i on cd_staff (office_id, id);
+
+/* KPI Month Buckets */
+create unique index cd_kpi_monthi on cd_kpi_month (office_id ,tranmonth ,kpi_group ,trantype);
+
+
+/*
+ * drop index cd_policies_insuror_i;
+ * drop index cd_policies_state_i;
+ * drop index cd_policies_producer1_i;
+ * drop index cd_policies_coverage_i;
+ * create index cd_policies_state_i on cd_policy (office_id, effdate, expdate, state);
+ * create index cd_policies_producer1_i on cd_policy (office_id, effdate, expdate, producer1_id);
+ * create index cd_policies_coverage_i on cd_policy (office_id, effdate, expdate, covcode);
+ * create index cd_policies_insuror_i on cd_policy (office_id, effdate, expdate, insuror_id);
+ * create index cd_policies_effdate_i on cd_policy (office_id, effdate);
+ * create index cd_policies_insuror_i on cd_policy (office_id, insuror_id);
+ * create index cd_policies_coverage_i on cd_policy (office_id, coverage_id);
+ */
+
+
+

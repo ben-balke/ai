@@ -1,0 +1,45 @@
+SET RANDOM	J+ARCPP		J$(480),J(1),J1(6)
+SET INDEX	J!ARCPP		J1(0),J1(1),J$(1,8)
+SET RANGE	J1(0)={sub:cono} AND J1(1)={sub:pcno}
+SET PRESELECT	cono={sub:cono} pcno={sub:pcno}
+custno				J$(1,8)			varchar(8)
+mailaddress    		J$(9,38)		varchar(30)
+city	     		J$(39,53)		char(15)
+state        		J$(54,58)		char(5)
+zipcode      		J$(59,67)		char(9)
+maritalstatus  		J$(68,68)		char(1)
+occupation     		J$(69,78)		char(10)
+sex		      		J$(79,79)		char(1)
+emp_name			J$(80,109)		varchar(30)
+emp_address			J$(110,139)		varchar(30)
+emp_city			J$(140,154)		varchar(15)
+emp_state			J$(155,159)		varchar(5)
+emp_zipcode			J$(160,168)		varchar(9)
+emp_phoneno			J$(169,180)		varchar(12)
+spouse_name			J$(181,210)		varchar(30)
+spouse_occup		J$(211,220)		varchar(10)
+spouse_sex			J$(221,221)		char(1)
+spouse_emp_nmae		J$(222,251)		varchar(30)
+spouse_emp_add		J$(252,281)		varchar(30)
+spouse_city			J$(282,296)		varchar(15)
+spouse_emp_state	J$(297,301)		varchar(5)
+spouse_emp_zip		J$(302,310)		varchar(9)
+spouse_emp_phone	J$(311,322)		varchar(12)
+dep1_name		J$(323,352)		varchar(30)
+dep1_sex		J$(353,353)		char(1)
+dep2_name		J$(354,383)		varchar(30)
+dep2_sex		J$(384,384)		char(1)
+dep3_name		J$(385,414)		varchar(30)
+dep3_sex		J$(415,415)		char(1)
+phone_ext		J$(416,419)		varchar(4)
+ssn				J$(420,430)		varchar(11)
+comment			J$(436,475)		varchar(40)
+residences		J(0)			int
+vehicles		J(1)			int
+cono			J1(0)			int
+pcno			J1(1)			int
+cust_birth		J1(2)			date
+spouse_birth	J1(3)			date
+dep1_birth		J1(4)			date
+dep2_birth		J1(5)			date
+dep3_birth		J1(6)			date

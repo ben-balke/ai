@@ -1,0 +1,10 @@
+####################################################################################################
+# Copyright (c) DuckDigit Technologies, Inc.  ALL RIGHTS RESERVED
+# $Header: /home/cvsroot/ai/adapters/tam/def/claimant.def,v 1.2 2009/09/21 21:37:24 secwind Exp $
+####################################################################################################
+filepath=tam/claimant.dbf
+description=Claimants
+tablename=claimant
+namemap=
+typemap=
+recordset=100

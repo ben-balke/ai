@@ -1,0 +1,7 @@
+SET FILE COVERAGES
+SET MAXRECORD 200
+SET SETSIZE 200
+rowid			rowid	varchar(20)
+covcode 		2 varchar(10)
+description 	3 varchar(100)
+covtype			7 varchar(10)

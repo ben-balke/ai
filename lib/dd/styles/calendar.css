@@ -1,0 +1,84 @@
+/********************
+ * CALENDAR
+ *******************/
+table.calendar {
+	border-top: 1px solid black;
+	border-left: 1px solid black;
+}
+
+table.calendar caption {
+	color: black;
+	border: none;
+}
+table.calendar caption a {
+	color: black;
+	text-decoration: underline;
+	font-weight: normal;
+	font-size: 12px;
+}
+table.calendar td {
+	border: 0;
+	border-right: 1px solid black;
+	border-bottom: 1px solid black;
+	padding: 0;
+	margin: 0;
+}
+table.calendar th {
+	background:#fe9;
+	color:black;
+	font-weight: bold;
+	text-align: center;
+}
+div.daynum {
+	float: right;
+	background: #fe9;
+	color: black;
+	width: 16px;
+	height: 13px;
+	text-align: center;
+	font-size: 11px;
+	padding: 0;
+	margin: 0;
+	padding-top: 1px;
+	border-left: 1px solid black;
+	border-bottom: 1px solid black;
+}
+div.day {
+	width: 97px;
+	height: 100px;
+	font-size: 9px;
+	line-height: 13px;
+	text-align: left;
+	overflow: auto;
+	border: 0;
+}
+.not-current-month {
+	background: #ddd;
+}
+div.today {
+	background: #eee;
+}
+div.day p {
+	padding: 0;	
+	margin: 0;
+	text-indent: -7px;
+	padding-left:8px;
+}
+div.day a {
+	color: black;
+	text-decoration: none;
+	margin:0; padding: 0;
+}
+div.day a:hover {
+	background: #536895;
+	color: white;
+	text-decoration: none;
+	margin:0; padding: 0;
+}
+div.cal-ctl {
+	width: 78px; 
+	height: 16px; 
+	border: none; 
+	padding: 0; 
+	margin:0;
+}

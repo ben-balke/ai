@@ -1,0 +1,11 @@
+SET RANDOM	J+PAPROD	J$(66),J(1),J1(2),J2(1)
+SET INDEX	J!PAPROD	J1(0),J$(1,4)
+SET RANGE	J1(0)={sub:cono}
+SET PRESELECT	cono={sub:cono}
+prodno		J$(1,4)		char(4)
+inqname		J$(5,14)	varchar(10)
+reportname	J$(15,44)	varchar(30)
+detailtrans	J$(46,46)	char(1)
+subinit		J$(47,52)	char(6)             
+salesseq	J(0)		int
+cono		J1(0)		int

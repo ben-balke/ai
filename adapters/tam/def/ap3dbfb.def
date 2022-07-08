@@ -1,0 +1,11 @@
+####################################################################################################
+# Copyright (c) DuckDigit Technologies, Inc.  ALL RIGHTS RESERVED
+# $Header: /home/cvsroot/ai/adapters/tam/def/ap3dbfb.def,v 1.2 2009/09/21 21:37:24 secwind Exp $
+####################################################################################################
+filepath=APPS/AP3DBFB.dbf
+description=AP3DBFB
+tablename=ap3dbfb
+namemap=
+typemap=
+#r_date=x
+recordset=100

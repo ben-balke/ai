@@ -1,0 +1,10 @@
+####################################################################################################
+# Copyright (c) DuckDigit Technologies, Inc.  ALL RIGHTS RESERVED
+# $Header: /home/cvsroot/ai/adapters/tam/def/tfile.def,v 1.2 2009/09/21 21:37:24 secwind Exp $
+####################################################################################################
+filepath=tam/tfile.dbf
+description=Activities
+tablename=tfile
+namemap=date=day,desc=descrip,order=seq,time=timeofday
+typemap=day=x,fdate=x,kdate=x
+recordset=100

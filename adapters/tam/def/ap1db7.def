@@ -1,0 +1,11 @@
+####################################################################################################
+# Copyright (c) DuckDigit Technologies, Inc.  ALL RIGHTS RESERVED
+# $Header: /home/cvsroot/ai/adapters/tam/def/ap1db7.def,v 1.2 2009/09/21 21:37:24 secwind Exp $
+####################################################################################################
+filepath=APPS/AP1DB7.dbf
+description=Commercial Auto Drivers
+tablename=ap1db7
+namemap=
+typemap=
+#r_date=x
+recordset=100

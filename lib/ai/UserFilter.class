@@ -1,0 +1,23 @@
+<?php
+class UserFilter
+{
+	var		$m_where = "";
+	
+	function __construct ($tagparser)
+	{
+		$filter = $tagparser->getValue ('user.filter');
+		if (isset ($filter))
+		{
+			$this->m_filter = ' and ' . $filter;
+		}
+		else
+		{
+			$this->m_where = '';
+		}
+	}
+	function getWhere ()
+	{
+		return $this->m_where;
+	}
+}
+?>

@@ -1,0 +1,23 @@
+SET RANDOM	J+PAMAST	J$(176),J(3),J1(3),J2(2)
+SET INDEX	J!PAMAST	J1(0),J(0)
+SET RANGE	J1(0)={sub:cono}
+SET PRESELECT	cono={sub:cono}
+inqname		J$(1,10)	varchar(10)
+insname1        J$(11,40)	varchar(30)
+insname2        J$(41,70)	varchar(30)
+address         J$(71,100)	varchar(30)
+citystzip       J$(101,130)	varchar(30)
+agencynum       J$(131,140)	varchar(10)
+payeetype       J$(141,142)	char(2)
+holdpayment     J$(143,143)	char(1)
+paytrancode     J$(144,145)	char(2)
+payifpaid	J$(147,147)	char(1)
+consolidation   J$(148,157)	varchar(10)
+freqcode        J$(158,162)	char(5)
+salutation	J$(163,176)	varchar(14)                
+payee_no        J(0)		int
+payterms        J(1)		int
+saseq_no	J(2) 		int
+cono            J1(0)		int
+payglacct_no    J2(0)		int
+fax		J2(2)		int

@@ -1,0 +1,56 @@
+SET FILE POLICIES
+SET MAXRECORD 1024
+SET SETSIZE 200
+rowid					rowid	varchar(20)
+policyno				2	varchar(40)
+named_insured			3	varchar(80)
+billto_code				4	varchar(15)
+#CLIENTS lookup name
+clientcode				5	varchar(15)
+#CLIENTS lookup name
+remarks					6	varchar(256)			MV
+insuror					7	varchar(10)
+#INSURORS lookup name
+coverages				8	varchar(10)
+#COVERAGES lookup description
+c_N_R_W					9	varchar(10)
+#POLICY.STATUS if policy_status (100)
+term					10	varchar(10)
+effdate					11	date				D2
+efftime					12	varchar(7)			MTH
+expdate					13	date				D2
+exptime					14	varchar(7)			MTH
+billing_Method			20	varchar(10)
+#BILL.METHODS if exist (16)
+cancel_type				22	varchar(10)
+#CANCEL.METHODS if exist (16)
+cancel_nonRenew_date	23	date				D2
+new_ren					27	varchar(100)
+transaction				28	varchar(100)
+tran_date				29	date				D2
+producer				30	varchar(100)			MV
+written_prem			31	float			MV
+wr_agencycomm			32	float			MV
+wr_prodcomm				33	int					MR2,
+next_polno				35	varchar(8)
+ann_prem1				36	float			MV
+ann_agencycomm			37	float			MV
+ann_prodcomm			38	int					MR0,
+company_no				39	int					MR0
+state					40	varchar(2)
+#STATES	lookup Name (25)	
+servicer				43	varchar(5)
+#STAFF lookup name
+department				44	varchar(10)			MR0
+cancel_date				45	date				D2
+cancel_reason			46	varchar(100)
+#CANCEL.REASONS if exists (16)
+reinstate_date			48	date				D2
+reinstate_reason		49	varchar(100)
+#REINSTATE.REASONS if exists (16)
+siccode				51	varchar(8)
+gen_info_remarks		55	varchar(128)			MV
+policy_type				62	varchar(5)
+payee					68	varchar(30)
+last_can_date			69	date				D2
+description				70  varchar(128)	

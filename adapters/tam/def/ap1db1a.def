@@ -1,0 +1,11 @@
+####################################################################################################
+# Copyright (c) DuckDigit Technologies, Inc.  ALL RIGHTS RESERVED
+# $Header: /home/cvsroot/ai/adapters/tam/def/ap1db1a.def,v 1.2 2009/09/21 21:37:24 secwind Exp $
+####################################################################################################
+filepath=APPS/AP1DB1A.dbf
+description=AP1DB1A
+tablename=ap1db1a
+namemap=
+typemap=
+#r_date=x
+recordset=100

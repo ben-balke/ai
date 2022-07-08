@@ -1,0 +1,11 @@
+####################################################################################################
+# Copyright (c) DuckDigit Technologies, Inc.  ALL RIGHTS RESERVED
+# $Header: /home/cvsroot/ai/adapters/tam/def/pinfo.def,v 1.2 2009/09/21 21:37:24 secwind Exp $
+####################################################################################################
+filepath=TAM/pinfo.dbf
+description=Notes
+tablename=pinfo
+namemap=
+typemap=
+#r_date=x
+recordset=100

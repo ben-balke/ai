@@ -1,0 +1,25 @@
+SET FILE CLIENTS
+SET MAXRECORD 2024
+SET SETSIZE 200
+rowid					rowid	varchar(20)
+clientcode				2	varchar(20)
+clientname				3	varchar(60)
+billto					4 	varchar(20)
+address1				5	varchar(60)
+address2				6	varchar(60)
+zipcode					7	varchar(20)		STVS
+city					8	varchar(60)
+state					9	varchar(2)
+phone1					10	varchar(20)	
+phone2					11	varchar(20)
+status					13	varchar(3)		MV
+producer				14	varchar(12)		MV
+servicer				15	varchar(12)		MV
+catcode					19	varchar(5)		MV
+siccode					27	varchar(8)		MV
+commentary				31	varchar(100)
+phone1_ext				33	varchar(20)
+phone2_ext				34	varchar(20)
+fax						35	varchar(20)
+email					52	varchar(43)
+division				56	varchar(10)

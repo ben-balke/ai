@@ -1,0 +1,25 @@
+create table {schema}.location as select 
+ key
+ ,rec
+ ,substring (rec,1,7) as ins_key
+ ,premisenum as locno 
+ ,substring (address,1,30)::varchar(30) as street
+ ,substring (address,31,22)::varchar(22) as city
+ ,substring (address,53,2)::varchar(2) as state
+ ,substring (address,55,10)::varchar(10) as zip
+ ,substring (address,65,19)::varchar(19) as county
+ ,substring (preminfo, 9,4) as year
+ ,dx_prepint (substring (preminfo, 9,4)) as yeari
+ ,substring (preminfo, 13,8)::varchar(8) as occupied
+ ,premdesc1
+ ,premdesc2
+ ,substring (carrier, 1, 3)::varchar(3) as code
+ ,substring (carrier, 4, 35)::varchar(35) as description
+ ,dx_prepint (substring (v711c1,1,5)) as empoloyees 
+ ,substring (future,2,1)::varchar(1) as city_inside
+ ,substring (future,3,1)::varchar(1) as city_outside
+ ,substring (future,4,1)::varchar(1) as i_owner
+ ,substring (future,5,1)::varchar(1) as i_tenant
+ ,substring (future,6,1)::varchar(1) as i_other
+ ,substring (preminfo, 1,8)::varchar(8) as i_other_desc
+ from {schema}.ap1db1b where key = 'P';

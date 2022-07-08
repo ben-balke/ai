@@ -1,0 +1,38 @@
+SET FILE PREMIUMS
+SET MAXRECORD 400000
+SET SETSIZE 1
+rowid				rowid	varchar(20)
+prem_seq_nr			0 int				MR0,R,6
+pol_seq_nr			4 varchar(10)		MR0,R,6
+plan				5 varchar(3)		L,3
+day					6 int				MR0,R,2
+deposit_amnt		7 float				MR2,R,13
+down				8 float				MR2,R,5
+nr_of_p				9 int				MR0,R,2
+nr_of_m				10 int				MR0,R,2
+fee_amnt			11 float			MR2,R,9
+fee_percent			12 float			MR2,R,5
+pmt_plan_remarks	13 varchar(65)		L,65
+trn					14 varchar(3)		MV,L,3
+trandate			15 date				D2/,MV,R,8
+entdate				16 date				D2/,MV,R,8
+trans_amnt			17 float			MR2,MV,R,14
+agt_percent			18 float			MR2,MV,R,6
+agcy_comm			19 float			MR2,MV,R,14
+producer			20 varchar(10)		MV,L,3
+prod_percent		21 float			MR2,MV,R,6
+prod_comm			22 float			MR2,MV,R,12
+anndate				23 date				D2/,R,8
+invoice_nr			24 varchar(15)		MR0,MV,R,7
+sales_id			25 varchar(10)		MV,L,7
+ari					26 varchar(10)		MV,L,7
+utm					27 varchar(7)		MV,L,7
+ni					30 varchar(2)		MV,R,2
+purge_date			31 date				D2/,R,8
+staff_code			32 varchar(10)		MV,L,3
+department			33 varchar(4)		MV,L,4
+billto				34 varchar(9)		MV,T,9
+payee				35 varchar(10)		MV,L,3
+cov					36 varchar(3)		MV,L,3
+ins					37 varchar(5)		MV,L,3
+nr_of_inv			99 varchar(5)		R,5

@@ -1,0 +1,125 @@
+<?php
+class CriteriaBuilder
+{
+	var		$m_where = "";
+	var		$m_criteria = "";
+	var		$m_headerSql = "";
+	var		$m_criteriaCount = 0;
+	
+	function __construct ($array, $tagparser)
+	{
+		$i = 0;
+		$prefix = '';
+		foreach ($array as $column=>$value)
+		{
+			switch ($column)
+			{
+			case 'coverage_id':
+				$this->m_where .= " and p.coverage_id='" . @addslashes ($value) . "' ";
+				$this->m_criteria .= "&coverage_id=" . @urlencode ($value);
+				$this->m_headerSql .= $prefix . "select 'Coverage' as tag, name from cd_coverage where office_id = 1 and id = {http.coverage_id}";
+				$i++;
+				break;
+			case 'siccode':
+				$this->m_where .= " and p.siccode='" . @addslashes ($value) . "' ";
+				$this->m_criteria .= "&siccode=" . @urlencode ($value);
+				$this->m_headerSql .= $prefix . "select 'SIC' as tag, name from cd_siccode where id = {http.siccode}";
+				$i++;
+				break;
+			case 'sicmajor':
+				$this->m_where .= " and p.sicmajor='" . @addslashes ($value) . "' ";
+				$this->m_criteria .= "&sicmajor=" . @urlencode ($value);
+				$this->m_headerSql .= $prefix . "select 'Major SIC' as tag, name from cd_sicmajor where id = {http.sicmajor}";
+				$i++;
+				break;
+			case 'producer_id':
+				$this->m_where .= " and p.producer_id='" . @addslashes ($value) . "' ";
+				$this->m_criteria .= "&producer_id=" . @urlencode ($value);
+				$this->m_headerSql .= $prefix . "select 'Producer' as tag, name from cd_staff where office_id = 1 and id = {http.producer_id}";
+				$i++;
+				break;
+			case 'servicer_id':
+				$this->m_where .= " and p.servicer_id='" . @addslashes ($value) . "' ";
+				$this->m_criteria .= "&servicer_id=" . @urlencode ($value);
+				$this->m_headerSql .= $prefix . "select 'Servicer' as tag, name from cd_staff where office_id = 1 and id = {http.servicer_id}";
+				$i++;
+				break;
+			case 'insuror_id':
+				$this->m_where .= " and p.insuror_id='" . @addslashes ($value) . "' ";
+				$this->m_criteria .= "&insuror_id=" . @urlencode ($value);
+				$this->m_headerSql .= $prefix . "select 'Carrier' as tag, name from cd_insuror where office_id = 1 and id = {http.insuror_id}";
+				$i++;
+				break;
+			case 'payee_id':
+				$this->m_where .= " and p.payee_id='" . @addslashes ($value) . "' ";
+				$this->m_criteria .= "&payee_id=" . @urlencode ($value);
+				$this->m_headerSql .= $prefix . "select 'Payee' as tag, name from cd_insuror where office_id = 1 and id = {http.payee_id}";
+				$i++;
+				break;
+
+			case 'kpi_group':
+				if (!isset ($value) || strlen ($value) == 0)
+				{
+					$this->m_where .= " and p.kpi_group is null";
+					$this->m_criteria .= "&kpi_group=";
+					$this->m_headerSql .= $prefix . "select 'LOB' as tag, name from ai_kpi_group where id is null";
+				}
+				else
+				{
+					$this->m_where .= " and p.kpi_group='" . @addslashes ($value) . "' ";
+					$this->m_criteria .= "&kpi_group=" . @urlencode ($value);
+					$this->m_headerSql .= $prefix . "select 'LOB' as tag, name from ai_kpi_group where id = {http.kpi_group}";
+				}
+				$i++;
+				break;
+			case 'state':
+				$this->m_where .= " and p.state='" . @addslashes ($value) . "' ";
+				$this->m_criteria .= "&state=" . @urlencode ($value);
+				$this->m_headerSql .= $prefix . "select 'State' as tag, name as name from cd_state where id = {http.state}";
+				$i++;
+				break;
+			case 'daterange':
+				$this->m_headerSql .= $prefix . "select 'Date Range' as tag, {kpi.kpi_daterange_desc} || ': ' || {kpi.begindate} ||' to '|| {kpi.enddate} as name";
+				$this->m_criteria .= "&daterange=" . @urlencode ($value);
+
+				$i++;
+				break;
+			case 'kpi_type':
+				$this->m_headerSql .= $prefix . "select 'Performance Indicator' as tag, {kpi.kpi_desc} as name";
+				$this->m_criteria .= "&kpi_type=" . @urlencode ($value);
+				$i++;
+				break;
+			}
+			if ($i == 1)
+			{
+				$prefix = ' UNION ';
+			}
+		}
+		$this->m_criteriaCount = $i;
+		if (isset ($tagparser))
+		{
+			$filter = $tagparser->getValue ('user.filter');
+			if (isset ($filter) && @strlen ($filter) != 0)
+			{
+				$this->m_where = ' and ' . $filter;
+			}
+		}
+	}
+	function getCount ()
+	{
+		return $this->m_criteriaCount;
+	}
+	function getWhere ()
+	{
+		return $this->m_where;
+	}
+	function getCriteria ()
+	{
+		return $this->m_criteria;
+	}
+	function getHeaderSql ()
+	{
+		return $this->m_headerSql;
+	}
+}
+?>

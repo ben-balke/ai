@@ -1,0 +1,10 @@
+####################################################################################################
+# Copyright (c) DuckDigit Technologies, Inc.  ALL RIGHTS RESERVED
+# $Header: /home/cvsroot/ai/adapters/tam/def/claim.def,v 1.2 2009/09/21 21:37:24 secwind Exp $
+####################################################################################################
+filepath=tam/claim.dbf
+description=Claim Records
+tablename=claim
+namemap=
+typemap=lossdate=x,closedate=x,reported=x,assigned=x,entered=x,eff=X,exp=X
+recordset=100

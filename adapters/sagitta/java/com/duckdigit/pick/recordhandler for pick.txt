@@ -1,0 +1,37 @@
+[FORM]
+
+
+
+[RECORDHANDLER]
+type=pick
+connect=pick.d3
+file=POLICIES
+mvfile=CLIENTS.POLICIES
+basic=SELECT CLIENTS WITH CLIENT.CODE LIKE "D]"
+itemid={http.clientid}
+recordset=30
+
+
+
+[itemid]
+recordfield=itemid
+
+[name]
+recordfield=1
+
+[address]
+recordfield=2
+
+
+[city]
+recordfield=3
+
+
+POPN
+string = filename
+short = number of fields
+short = field number ....
+
+
+POPN
+File Channel

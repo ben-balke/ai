@@ -1,0 +1,10 @@
+####################################################################################################
+# Copyright (c) DuckDigit Technologies, Inc.  ALL RIGHTS RESERVED
+# $Header: /home/cvsroot/ai/adapters/tam/def/note.def,v 1.2 2009/09/21 21:37:24 secwind Exp $
+####################################################################################################
+filepath=TAM/note.dbf
+description=Notes
+tablename=note
+namemap=
+typemap=r_date=x
+recordset=100

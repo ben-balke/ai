@@ -1,0 +1,15 @@
+SET FILE INSURORS
+SET MAXRECORD 2048
+SET SETSIZE 200
+rowid			rowid	varchar(20)
+insurorcode  	2 varchar(6)		L,5
+name 			3 varchar(50)		L,39
+payee 			4 varchar(10)		L,5
+address1 		5 varchar(128)		L,39
+address2 		6 varchar(128)		L,39
+zipcode 		7 varchar(15)		L,2,STVS
+city 			8 varchar(40)		L,25
+state	 		9 varchar(10)		L,2
+phone1	 		10 varchar(20)		L,2
+phone2	 		11 varchar(20)		L,2
+grp 			12 varchar(10)

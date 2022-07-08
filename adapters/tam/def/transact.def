@@ -1,0 +1,6 @@
+filepath=tam/TRANSACT.dbf
+description=Transactions
+tablename=transact
+namemap=date=trandate,desc=descrip,skip=skipit
+typemap=edate=X,trandate=X
+recordset=100

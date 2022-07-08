@@ -1,0 +1,55 @@
+SET RANDOM J+ARCMF J$(260),J(5),J1(13),J2(2)
+SET INDEX J!ARCMF	J1(0),J1(1),J$(1,8)
+SET RANGE	J1(0)={sub:cono} AND J1(1)={sub:pcno}
+SET PRESELECT	cono={sub:cono} pcno={sub:pcno}
+custno				J$(1,8)				varchar(8)
+inq_name			J$(9,18)			varchar(10)
+cust_type			J$(19,20)			char(2)
+statement_type		J$(21,21)			char(1)
+late_charge			J$(22,22)			char(1)
+pb1					J$(24,27)			char(4)
+pb2					J$(28,31)			char(4)
+credit_code			J$(32,33)			char(2)
+xsell             	J$(34,35)           char(2)
+lead_src          	J$(36,37)           char(2)
+prem_fin_term		J$(38,38)			char(1)
+name1				J$(39,68)			varchar(30)
+name2				J$(69,98)			varchar(30)
+address				J$(99,128)			varchar(30)
+city				J$(129,143)			varchar(15)
+state				J$(144,148)			char(5)
+zip					J$(149,157)			varchar(9)
+phone				J$(158,169)			varchar(12)
+mstr_custno			J$(170,177)			varchar(8)
+sic_codes			J$(178,181)			char(4)
+comment				J$(182,206)			varchar(25)
+salutation			J$(207,226)			varchar(20)
+mailing_code		J$(227,231)			char(5)
+profile				J$(232,232)			char(1)
+producer			J$(233,236)			char(4)
+acct_exec			J$(237,240)			char(4)
+srep1				J$(241,244)			char(4)
+srep2				J$(245,248)			char(4)
+fax					J$(249,260)			varchar(12)
+no_tran_this		J(0)				int
+no_tran_last		J(1)				int
+no_losses_this		J(2)				int
+no_losses_last		J(3)				int
+on_hold				J(4)				int
+split_fund			J(5)				int
+cono				J1(0)				int
+pcno				J1(1)				int
+credit_limit		J1(2)				float
+date_opened			J1(3)				date
+date_last_active	J1(4)				date
+mstr_pcno			J1(5)				int
+prem_this			J1(6)				float
+prem_last			J1(7)				float
+comm_this			J1(8)				float
+comm_last			J1(9)				float
+net_com_this		J1(10)				float
+net_com_last		J1(11)				float
+losses_this			J1(12)				float
+losses_last			J1(13)				float
+balance				J2(0)				float
+prem_fin_budget		J2(1)				float

@@ -1,0 +1,8 @@
+SET FILE COMPANY.MASTER
+SET MAXRECORD 600
+SET SETSIZE 200
+rowid			rowid	varchar(20)
+div_nr			0 int		MR0,R,3
+div_name		1 varchar(30)	L,30
+department		6 varchar(4)	MV,L,4
+department_name		7 varchar(30)	MV,L,30

@@ -1,0 +1,10 @@
+####################################################################################################
+# Copyright (c) DuckDigit Technologies, Inc.  ALL RIGHTS RESERVED
+# $Header: /home/cvsroot/ai/adapters/tam/def/claimpmt.def,v 1.2 2009/09/21 21:37:24 secwind Exp $
+####################################################################################################
+filepath=tam/claimpmt.dbf
+description=Claim Payments
+tablename=claimpmt
+namemap=desc=descrip
+typemap=chkdate=x,sentdate=x
+recordset=100

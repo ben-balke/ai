@@ -1,0 +1,145 @@
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="/styles/menu.css" />
+<link rel="stylesheet" type="text/css" href="/styles/default.css" />
+<link rel="stylesheet" type="text/css" href="/styles/widget.css" />
+<script src="/scripts/menu.js"></script>
+<body>
+<table><tr><td nowrap>
+<ul id="sddm">
+    <li><a href="#" 
+        onmouseover="mopen('Office')" 
+        onmouseout="mclosetime()">Offices</a>
+        <div id="office" 
+            onmouseover="mcancelclosetime()" 
+            onmouseout="mclosetime()">
+        <a href="#">Murray Insurance</a>
+        <a href="#">Murray Benefits</a>
+        </div>
+    </li>
+    <li><a href="#" 
+        onmouseover="mopen('book')" 
+        onmouseout="mclosetime()">Book</a>
+        <div id="book" 
+            onmouseover="mcancelclosetime()" 
+            onmouseout="mclosetime()">
+        <a href="#">By Producer</a>
+        <a href="#">By Servicer</a>
+        <a href="#">By Payee</a>
+        <a href="#">By Insuror</a>
+        <a href="#">By Sic Code</a>
+        <a href="#">By Coverage</a>
+        <a href="#">By State</a>
+        <a href="#">By Performance Groups</a>
+        </div>
+    </li>
+    <li><a href="#" 
+        onmouseover="mopen('m2')" 
+        onmouseout="mclosetime()">Performance</a>
+        <div id="m2" 
+            onmouseover="mcancelclosetime()" 
+            onmouseout="mclosetime()">
+        <a href="#">New Business</a>
+        <a href="#">Renewal Business</a>
+        <a href="#">Lost Business</a>
+        </div>
+    </li>
+    <li><a href="#" 
+        onmouseover="mopen('m3')" 
+        onmouseout="mclosetime()">Browse</a>
+        <div id="m3" 
+            onmouseover="mcancelclosetime()" 
+            onmouseout="mclosetime()">
+        <a href="#">Customers</a>
+        <a href="#">Policies</a>
+        </div>
+    </li>
+    <li><a href="#" 
+        onmouseover="mopen('m4')" 
+        onmouseout="mclosetime()">Configure</a>
+        <div id="m4" 
+            onmouseover="mcancelclosetime()" 
+            onmouseout="mclosetime()">
+        <a href="#">Offices</a>
+        <a href="#">Users</a>
+        <a href="#">Performance Groups</a>
+        </div>
+    </li>
+    <li><a href="#">Help</a></li>
+    <li><a href="#">About AI</a></li>
+</ul>
+<div style="clear:both"></div>
+</td></tr>
+<tr><td>
+</td></tr>
+</table>
+			<div id=outer2>
+sdflkjsdflkjsdf
+<div class=widgetouter id="id_topcustomers">222222222<table width="600px" cellspacing=0 cellpadding=0 border=0><tr><td class=widgettitle nowrap width=100%
+				onmouseover="javascript:$('topcustomers-edit-img').src='/images/widgetedit.png';"
+				onmouseout="javascript:$('topcustomers-edit-img').src='/images/widgetedit-grey.png';">
+			<div id="topcustomers-control" class="widgetcontrols"> 
+				<a href="#" class=widgetcontrol onclick="WIDGET_showControlDiv ('topcustomers');return false;"><img src="/images/widgetedit-grey.png" id="topcustomers-edit-img"></a> 
+				</div>Top Customers
+		</td></tr></table><div class="widget-edit-control" id="topcustomers-edit"><div class="widget-edit-control-title">Preferences</div><div class="widget-edit-control-content"><form action="/widget/set_admin_props.php" method="post"><table align="center" class="widget-control-edit-table"><tr><td class="label"><label for="n_top_customers" id="label_n_top_customers">Show:</label></td><td class="data"><select name='n_top_customers'  id='n_top_customers'>
+<option value='3' >3</option><option value='4' >4</option><option value='5'  selected >5</option><option value='8' >8</option><option value='10' >10</option><option value='15' >15</option><option value='20' >20</option><option value='25' >25</option><option value='30' >30</option><option value='40' >40</option><option value='50' >50</option><option value='75' >75</option><option value='100' >100</option></select></td></tr><tr><td class="label"><label for="sort_top_customers" id="label_sort_top_customers">Sort By:</label></td><td class="data"><select name='sort_top_customers'  id='sort_top_customers'>
+<option value='revenue desc'  selected >Revenue</option><option value='premium desc' >Premium</option></select></td></tr><tr><td colspan=2 align=center><input type="submit" name="DD_update" id="DD_update" value="Save" class=button />&nbsp;<input type="button" onclick="WIDGET_hideControlDiv ();" class=button value="Cancel"></td></tr></table></form></div></div><div class=widgetinner style="width:600px;"><table width=100% class=widgettable cellpadding=2 cellspacing=0 border=0><tr><td id="topcustomers_content"><table class="querylist" cellpadding="0" cellspacing="0" width="100%">
+<thead>
+<tr>
+	<th >#</th>
+	<th align="left">Top 5 Customers</th>
+	<th >Premium</th>
+	<th >Revenue</th>
+	<th ># of Policies</th>
+	<th ># of Claims</th>
+</tr>
+</thead><tr class="odd">
+    <td align="right">1.</td>
+	<td ><a href="/customer.php?customer_id=111495">Anderson Windows</a>&nbsp;</td>
+	<td align=right>$2,052,900&nbsp;</td>
+	<td align=right>$285,083&nbsp;</td>
+	<td align=right>8&nbsp;</td>
+	<td align=right>&nbsp;</td>
+</tr><tr class="even">
+    <td align="right">2.</td>
+	<td ><a href="/customer.php?customer_id=112086">Western Financial</a>&nbsp;</td>
+	<td align=right>$1,424,445&nbsp;</td>
+	<td align=right>$197,572&nbsp;</td>
+	<td align=right>8&nbsp;</td>
+	<td align=right>&nbsp;</td>
+</tr><tr class="odd">
+    <td align="right">3.</td>
+	<td ><a href="/customer.php?customer_id=89643">Home Depot</a>&nbsp;</td>
+	<td align=right>$1,056,970&nbsp;</td>
+	<td align=right>$173,983&nbsp;</td>
+	<td align=right>18&nbsp;</td>
+	<td align=right>&nbsp;</td>
+</tr><tr class="even">
+    <td align="right">4.</td>
+	<td ><a href="/customer.php?customer_id=112090">Banco Popular North America</a>&nbsp;</td>
+	<td align=right>$771,760&nbsp;</td>
+	<td align=right>$101,598&nbsp;</td>
+	<td align=right>6&nbsp;</td>
+	<td align=right>&nbsp;</td>
+</tr><tr class="odd">
+    <td align="right">5.</td>
+	<td ><a href="/customer.php?customer_id=115284">South Coast Business Center</a>&nbsp;</td>
+	<td align=right>$570,033&nbsp;</td>
+	<td align=right>$59,729&nbsp;</td>
+	<td align=right>1&nbsp;</td>
+	<td align=right>&nbsp;</td>
+</tr><tfoot>
+<tr class="">
+    <td colspan=2><a href="/customerlist.php">Search Customers</a></td>
+    <td align=right>$5,876,108&nbsp;</td>
+    <td align=right>$817,965&nbsp;</td>
+    <td align=right>41&nbsp;</td>
+    <td align=right>&nbsp;</td>
+</tr>
+</tfoot>
+</table></td></tr>
+			</table></div></div>
+
+
+</body>
+</head>

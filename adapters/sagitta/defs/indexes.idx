@@ -1,0 +1,7 @@
+alter table clients add constraint clients_pkey PRIMARY KEY (rowid);
+alter table company_master add constraint company_master_pkey PRIMARY KEY (rowid);
+alter table coverages add constraint coverages_pkey PRIMARY KEY (rowid);
+alter table insurors add constraint insurors_pkey PRIMARY KEY (rowid);
+alter table policies add constraint policies_pkey PRIMARY KEY (rowid);
+alter table premiums add constraint premiums_pkey PRIMARY KEY (rowid);
+alter table staff add constraint staff_pkey PRIMARY KEY (rowid);
